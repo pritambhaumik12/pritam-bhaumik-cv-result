@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pritam Bhaumik</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  color: #202124;
+  margin: 0;
+  padding: 1rem;
+}
+  
+  
+.search-bar {
+  border: 1px solid #dfe1e5;
+  border-radius: 18px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  background-color: white;
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 100%;
+  font-size: 18px;
+  background-color: transparent;
+}
+.result {
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-wrap: wrap;
+}
+.result-info {
+  flex: 1;
+}
+.result h2 {
+  color: #1a0dab;
+  margin: 0;
+}
+.result h3 {
+  color: #291d6f;
+  margin: 0;
+}
+.result a {
+  color: #006621;
+  text-decoration: none;
+  font-size: 14px;
+}
+.info {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.profile-container {
+  width: 150px;
+  margin-left: auto;
+  text-align: center;
+}
+img.profile {
+position:absolute;
+top:40%;
+right:20%;
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #1a0dab;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.section {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.section strong {
+  font-size: 18px;
+  color: #333;
+}
+.section ul {
+  padding-left: 20px;
+  line-height: 1.7;
+}
+.section p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.logo {
+            font-size: 40px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo span:nth-child(1) { color: #4285F4; }
+        .logo span:nth-child(2) { color: #EA4335; }
+        .logo span:nth-child(3) { color: #FBBC05; }
+        .logo span:nth-child(4) { color: #4285F4; }
+        .logo span:nth-child(5) { color: #34A853; }
+        .logo span:nth-child(6) { color: #EA4335; }
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f1f1f1;
+}
+@media screen and (max-width: 768px) {
+  .result {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-container {
+    margin: 20px 0 0 0;
+  }
+}
+  
+  .dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode a {
+  color: #8ab4f8;
+}
+
+.dark-mode .search-bar {
+  background-color: #1e1e1e;
+  box-shadow: 0 1px 6px rgba(255, 255, 255, 0.1);
+  border-color: #444;
+}
+
+.dark-mode .search-bar input {
+  color: #e0e0e0;
+}
+
+.dark-mode .result,
+.dark-mode .section {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .result h2 {
+  color: #8ab4f8;
+}
+.dark-mode .result h3 {
+  color: #ebeff4;
+}
+
+.dark-mode th {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+.dark-mode table,
+.dark-mode th,
+.dark-mode td {
+  border-color: #444;
+}
+
+.dark-mode td {
+  color: #dddddd;
+}
+
+.dark-mode strong {
+  color: #ffffff;
+}
+
+.dark-mode ul li,
+.dark-mode p,
+.dark-mode .info {
+  color: #d0d0d0;
+}
+
+  </style>
+</head>
+
+<div class="logo">
+  <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<body>  <div class="search-bar">
+  
+    <input type="text" value="Pritam Bhaumik " readonly />
+  
+  <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+  <label style="font-size: 16px; margin-right: 8px;">Dark Mode</label>
+  <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+</div>
+  
+  
+  </div>  <div class="result">
+    
+    
+    <div class="result-info">
+      <h2>Pritam Bhaumik </h2>
+      <h3>Software Enthusiast | Developer</h3>
+
+      <div class="info">
+       <p><i class="fas fa-envelope"></i> <a href="mailto:pritambhaumiks@gmail.com">pritambhaumiks@gmail.com</a></p>
+  <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/pritambhaumik">LinkedIn Profile</a></p>
+  <p><i class="fas fa-map-marker-alt"></i> Address : Tamluk, West Bengal, 721629</p>
+  <p><i class="fas fa-phone"></i> Contact No.: ‪+91 – 9002260825‬</p>
+  <p><i class="fas fa-birthday-cake"></i> Date of Birth: 12th March, 2006</p>
+  <p><i class="fa-solid fa-mars"></i> Gender: Male</p>
+  <p><i class="fas fa-flag"></i> Nationality: Indian</p>
+  
+</div>
+      </div>
+    </div>
+    <div class="profile-container">
+      <img src="your-image.jpg" alt="Pritam's Photo" class="profile" />
+    </div>
+  </div>  <div class="section">
+    <strong>Career Objective:</strong>
+    <p>To prove myself dedicated, worthy and energetic in a progressive organization team that dynamically works towards success and growth of the organization.</p>
+  </div>  <div class="section">
+    <strong>Education:</strong>
+    <table>
+      <thead>
+        <tr>
+          <th>Institution Name</th>
+          <th>Degree</th>
+          <th>Board</th>
+          <th>Marks/CGPA</th>
+          <th>Year of Passing</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Brainware University</td>
+          <td>B.Tech in Computer Science and Engineering</td>
+          <td>Autonomous</td>
+          <td>CGPA: 8.15 (Till 1st Semester)</td>
+          <td>2028</td>
+        </tr>
+        <tr>
+          <td>Paramanandapur Jagannath Institution</td>
+          <td>Higher Secondary</td>
+          <td>W.B.C.H.S.E</td>
+          <td>74.8%</td>
+          <td>2024</td>
+        </tr>
+        <tr>
+          <td>Paramanandapur Jagannath Institution</td>
+          <td>Secondary</td>
+          <td>W.B.B.S.E</td>
+          <td>90.7%</td>
+          <td>2022</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  <div class="section">
+    <strong>Skills:</strong>
+    <ul>
+      <li>JavaScript (Certified)</li>
+      <li>Photo & Video Editing</li>
+      <li>C Programming</li>
+      <li>Communication & Problem Solving</li>
+    </ul>
+  </div>  <div class="section">
+    <strong>Achievements:</strong>
+    <ul>
+      <li>Top Innovator - ATL Marathon (WB, 2022)</li>
+      <li>Presented Idea to PM at NEP Anniversary, 2023</li>
+      <li>1st in Future Founder Challenge - Brainware University, 2024</li>
+    </ul>
+  </div>  <div class="section">
+    <strong>Strengths:</strong>
+    <ul>
+      <li>Team Leadership</li>
+      <li>Active Listener</li>
+      <li>Smart Worker</li>
+      <li>Quick Learner</li>
+    </ul>
+  </div>  <div class="section">
+    <strong>Hobbies & Interests:</strong>
+    <ul>
+    <li>Innovating</li>
+    <li>Drawing</li>
+    <li>Artificial Intelligence</li>
+    <li> Software Development</li>
+    </ul>
+  </div>
+  <script>
+  const toggle = document.getElementById("darkModeToggle");
+
+  // Apply saved preference on load
+  window.onload = function () {
+    if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+      toggle.checked = true;
+    }
+  };
+
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "enabled");
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+    }
+  }
+</script>
+</body>
+</html>
